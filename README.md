@@ -1,50 +1,41 @@
-# React + TypeScript + Vite
+# Social App - React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A fully responsive social media web application built using React, Redux Toolkit, Material UI, and other modern web technologies. This app features a dark/light mode toggle, authentication, user posts, comments, and more.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Authentication**: User login, registration, and profile management.
+- **Post Creation**: Users can create posts with text and images.
+- **Comments**: Users can comment on posts, with the option to expand the comment section.
+- **File Uploads**: Allows image uploads with preview functionality.
+- **Dark/Light Mode**: Easily toggle between light and dark mode.
+- **Responsive Design**: Optimized for both mobile and desktop devices.
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Frontend**: 
+  - React
+  - Redux Toolkit for state management
+  - Material UI for UI components
+  - React Router for routing
+  - React Suspense for lazy loading
+  - React Hook Form for form handling
+  - Zod for schema validation
+  - Tailwind CSS for styling
 
-- Configure the top-level `parserOptions` property like this:
+- **Authentication**: 
+  - JWT-based authentication
+  - Redux Toolkit for managing authentication state
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- **File Handling**: 
+  - File preview before upload
+  - Image upload functionality
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Installation
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/social-app-react.git
+   cd social-app-react
+   npm install
+   npm start
